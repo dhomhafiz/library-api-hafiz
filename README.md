@@ -47,7 +47,7 @@ docker-compose up --build
 ```
 
 ## Application Access
-API Base URL: http://localhost:8080
+API Base URL: http://localhost:8080<br>
 Swagger UI: http://localhost:8080/swagger-ui.html
 
 ## Spring Profiles

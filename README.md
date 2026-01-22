@@ -38,29 +38,44 @@ DB_PORT=5432
 DB_NAME=librarydb
 DB_USERNAME=libraryuser
 DB_PASSWORD=librarypass
+```
 
 ## How to Run (Docker)
 Run the following command:
+```bash
 docker-compose up --build
+```
 
 ## Application Access
 API Base URL: http://localhost:8080
 Swagger UI: http://localhost:8080/swagger-ui.html
 
 ## Spring Profiles
-dev → H2 in-memory database
-prod → PostgreSQL (Docker)
-Active profile is set using:
+dev → H2 in-memory database<br>
+prod → PostgreSQL (Docker)<br>
+Active profile is set using:<br>
+```bash
 SPRING_PROFILES_ACTIVE=prod
+```
 
 ## Sample API Endpoints
-Books
-GET /books
-POST /books
+### Books
+- GET `/books`
+- POST `/books`
 
-Borrowers
-GET /borrowers
-POST /borrowers
+### Borrowers
+- GET `/borrowers`
+- POST `/borrowers`
+
+## Why PostgreSQL?
+
+PostgreSQL is chosen as the database for this project because it is:<br>
+- Open-source and production-ready – widely used in real-world enterprise systems<br>
+- Strong ACID compliance – ensures data integrity and reliability<br>
+- Excellent support for relational data – suitable for structured entities like books and borrowers<br>
+- Advanced features – such as constraints, indexing, and JSON support<br>
+- Docker-friendly – easy to run consistently across development and production environments<br>
+- PostgreSQL provides a good balance between performance, reliability, and scalability, making it a solid choice for backend REST APIs.<br>
 
 ## Notes
 Database data is persisted using Docker volume
